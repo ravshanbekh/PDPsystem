@@ -1,0 +1,17 @@
+D:\C#\Bee\Data\bin\Debug\net6.0\Data.deps.json
+D:\C#\Bee\Data\bin\Debug\net6.0\Data.runtimeconfig.json
+D:\C#\Bee\Data\bin\Debug\net6.0\Data.dll
+D:\C#\Bee\Data\bin\Debug\net6.0\Data.pdb
+D:\C#\Bee\Data\bin\Debug\net6.0\Domain.dll
+D:\C#\Bee\Data\bin\Debug\net6.0\Domain.pdb
+D:\C#\Bee\Data\obj\Debug\net6.0\Data.csproj.AssemblyReference.cache
+D:\C#\Bee\Data\obj\Debug\net6.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\Bee\Data\obj\Debug\net6.0\Data.AssemblyInfoInputs.cache
+D:\C#\Bee\Data\obj\Debug\net6.0\Data.AssemblyInfo.cs
+D:\C#\Bee\Data\obj\Debug\net6.0\Data.csproj.CoreCompileInputs.cache
+D:\C#\Bee\Data\obj\Debug\net6.0\Data.csproj.CopyComplete
+D:\C#\Bee\Data\obj\Debug\net6.0\Data.dll
+D:\C#\Bee\Data\obj\Debug\net6.0\refint\Data.dll
+D:\C#\Bee\Data\obj\Debug\net6.0\Data.pdb
+D:\C#\Bee\Data\obj\Debug\net6.0\Data.genruntimeconfig.cache
+D:\C#\Bee\Data\obj\Debug\net6.0\ref\Data.dll

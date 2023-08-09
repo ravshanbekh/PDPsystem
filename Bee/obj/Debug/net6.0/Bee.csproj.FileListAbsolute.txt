@@ -1,0 +1,15 @@
+D:\C#\Bee\Bee\bin\Debug\net6.0\Bee.exe
+D:\C#\Bee\Bee\bin\Debug\net6.0\Bee.deps.json
+D:\C#\Bee\Bee\bin\Debug\net6.0\Bee.runtimeconfig.json
+D:\C#\Bee\Bee\bin\Debug\net6.0\Bee.dll
+D:\C#\Bee\Bee\bin\Debug\net6.0\Bee.pdb
+D:\C#\Bee\Bee\obj\Debug\net6.0\Bee.csproj.AssemblyReference.cache
+D:\C#\Bee\Bee\obj\Debug\net6.0\Bee.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\Bee\Bee\obj\Debug\net6.0\Bee.AssemblyInfoInputs.cache
+D:\C#\Bee\Bee\obj\Debug\net6.0\Bee.AssemblyInfo.cs
+D:\C#\Bee\Bee\obj\Debug\net6.0\Bee.csproj.CoreCompileInputs.cache
+D:\C#\Bee\Bee\obj\Debug\net6.0\Bee.dll
+D:\C#\Bee\Bee\obj\Debug\net6.0\refint\Bee.dll
+D:\C#\Bee\Bee\obj\Debug\net6.0\Bee.pdb
+D:\C#\Bee\Bee\obj\Debug\net6.0\Bee.genruntimeconfig.cache
+D:\C#\Bee\Bee\obj\Debug\net6.0\ref\Bee.dll
