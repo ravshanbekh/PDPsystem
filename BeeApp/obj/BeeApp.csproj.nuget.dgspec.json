@@ -254,6 +254,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "D:\\C#\\Bee\\Data\\Data.csproj": {
+                "projectPath": "D:\\C#\\Bee\\Data\\Data.csproj"
+              },
               "D:\\C#\\Bee\\Domain\\Domain.csproj": {
                 "projectPath": "D:\\C#\\Bee\\Domain\\Domain.csproj"
               }

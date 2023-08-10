@@ -1,6 +1,6 @@
 ﻿namespace Service.Helpers;
 
-public class Responce <T>
+public class Responce<T>
 {
     public int StatusCode { get; set; }
     public string Message { get; set; }
