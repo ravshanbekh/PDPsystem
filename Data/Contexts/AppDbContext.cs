@@ -24,7 +24,7 @@ public class AppDbContext : DbContext
 
         // Goal Model
         modelBuilder.Entity<Goal>()
-            .HasKey(g => g.GoalId);
+            .HasKey(g => g.Id);
         modelBuilder.Entity<Goal>()
             .HasOne(g => g.User)
             .WithMany(u => u.Goals)

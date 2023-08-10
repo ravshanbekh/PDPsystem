@@ -1,8 +1,9 @@
-﻿namespace Domain.Entities;
+﻿using Domain.Commons;
 
-public class Goal
+namespace Domain.Entities;
+
+public class Goal:Auditable
 {
-    public long GoalId { get; set; }
     public long UserId { get; set; }
     public string GoalTitle { get; set; }
     public string GoalDescription { get; set; }

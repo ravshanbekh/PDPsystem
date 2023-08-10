@@ -1,6 +1,6 @@
 ﻿using Domain.Commons;
 
-namespace Nebula.DAL.IRepositories;
+namespace Data.IRepository;
 
 public interface IRepository<T> where T : Auditable
 {

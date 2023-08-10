@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Domain.Entities;
 
-namespace Data.IRepository
+namespace Data.IRepository;
+
+public interface IUnitOfWork : IDisposable
 {
-    internal class IUnitOfWork
-    {
-    }
+    IRepository<Goal> GoalRepository { get; }
+    IRepository<User> UserRepository { get; }
+    IRepository<JournalEntry> JournalEntryRepository { get; }
+    IRepository<TaskUser> TaskRepository { get; }
+
+    Task SaveAsync();
 }

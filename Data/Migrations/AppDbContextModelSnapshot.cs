@@ -24,11 +24,14 @@ namespace Data.Migrations
 
             modelBuilder.Entity("Domain.Entities.Goal", b =>
                 {
-                    b.Property<long>("GoalId")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("GoalId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime>("DueDate")
                         .HasColumnType("datetime2");
@@ -48,10 +51,13 @@ namespace Data.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
                     b.Property<long>("UserId")
                         .HasColumnType("bigint");
 
-                    b.HasKey("GoalId");
+                    b.HasKey("Id");
 
                     b.HasIndex("UserId");
 

@@ -32,18 +32,20 @@ namespace Data.Migrations
                 name: "Goals",
                 columns: table => new
                 {
-                    GoalId = table.Column<long>(type: "bigint", nullable: false)
+                    Id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserId = table.Column<long>(type: "bigint", nullable: false),
                     GoalTitle = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     GoalDescription = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     StartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DueDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Status = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Goals", x => x.GoalId);
+                    table.PrimaryKey("PK_Goals", x => x.Id);
                     table.ForeignKey(
                         name: "FK_Goals_Users_UserId",
                         column: x => x.UserId,
@@ -97,7 +99,7 @@ namespace Data.Migrations
                         name: "FK_Tasks_Goals_GoalId",
                         column: x => x.GoalId,
                         principalTable: "Goals",
-                        principalColumn: "GoalId",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
