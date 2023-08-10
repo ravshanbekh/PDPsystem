@@ -1,6 +1,6 @@
 ﻿namespace Service.DTOs.GoalDTOs;
 
-public class GoalCreateDto
+public class GoalCreationDto
 {
     public long UserId { get; set; }
     public string GoalTitle { get; set; }

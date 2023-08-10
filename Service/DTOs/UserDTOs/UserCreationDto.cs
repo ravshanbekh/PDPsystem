@@ -1,6 +1,6 @@
 ﻿namespace Service.DTOs.UserDTOs;
 
-public class UserCreateDto
+public class UserCreationDto
 {
     public string Username { get; set; }
     public string Email { get; set; }

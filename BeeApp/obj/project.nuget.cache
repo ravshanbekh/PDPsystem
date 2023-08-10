@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "q2UqpuYGs4J3UEZ2mieRLOA+ZhH+edqVLCCQlqbnZH2WUIsd0Owk7G6QC34mSgiQpni1jy2m0lmcJ2AaNTrSBQ==",
+  "dgSpecHash": "wSIPLhfWQfRLa/pOC2DWzGm+nPSSnoYb5zuincmwwIEOqoq5hgFNDK0rU0V/POOfQ877JAV9sF7F0wdoRSs5hQ==",
   "success": true,
   "projectFilePath": "D:\\C#\\Bee\\BeeApp\\BeeApp.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Ravshanbek\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\Ravshanbek\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\Ravshanbek\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Ravshanbek\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\Ravshanbek\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\Ravshanbek\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.20\\microsoft.entityframeworkcore.6.0.20.nupkg.sha512",

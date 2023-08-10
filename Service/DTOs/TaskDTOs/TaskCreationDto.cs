@@ -1,6 +1,6 @@
 ﻿namespace Service.DTOs.TaskDTOs;
 
-public class TaskCreateDto
+public class TaskCreationDto
 {
     public long GoalId { get; set; }
     public string TaskName { get; set; }

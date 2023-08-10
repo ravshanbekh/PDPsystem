@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "EX8O0sw5V0ytzHirrUqplrFyJkfN3GcSONZxoVBnT9fy/q1Ipn6mzj3cJApDnCxbrj3syq5jwN1hCkvWACG6jQ==",
+  "dgSpecHash": "2pO8uNEr1rx1arnmLzuqtvW82JHPQj1bUWnALU5gLigQh2FAOT+d+ldR7ZJr0M/te1KY0ks0fFFXA/QBFAyJVw==",
   "success": true,
   "projectFilePath": "D:\\C#\\Bee\\Service\\Service.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Ravshanbek\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\Ravshanbek\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }
