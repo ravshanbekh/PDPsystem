@@ -1,8 +1,6 @@
-﻿using Domain.Commons;
+﻿namespace Service.DTOs.GoalDTOs;
 
-namespace Domain.Entities;
-
-public class Goal:Auditable
+public class GoalCreateDto
 {
     public long UserId { get; set; }
     public string GoalTitle { get; set; }
@@ -11,7 +9,4 @@ public class Goal:Auditable
 
     public DateTime DueDate { get; set; }
     public string Status { get; set; }
-    public User User { get; set; }
-    public List<TaskUser> Tasks { get; set; }
 }
-
