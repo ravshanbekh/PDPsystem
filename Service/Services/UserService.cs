@@ -37,12 +37,12 @@ public class UserService : IUserService
         await this.unitOfWork.UserRepository.CreateAsync(user);
         await this.unitOfWork.SaveAsync();
 
-        var listGoals = user.Goals.Select(x => this.mapper.Map<GoalResultDto>(x));
-        var listEntry = user.JournalEntries.Select(x => this.mapper.Map<JournalEntryResultDto>(x));
+        //var listGoals = user.Goals.Select(x => this.mapper.Map<GoalResultDto>(x));
+        //var listEntry = user.JournalEntries.Select(x => this.mapper.Map<JournalEntryResultDto>(x));
         var result = this.mapper.Map<UserResultDto>(user);
 
-        result.Goals = listGoals.ToList();
-        result.JournalEntries = listEntry.ToList();
+        //result.Goals = listGoals.ToList();
+        //result.JournalEntries = listEntry.ToList();
 
         return new Responce<UserResultDto>()
         {
@@ -52,23 +52,81 @@ public class UserService : IUserService
         };
     }
 
-    public Task<Responce<IEnumerable<UserResultDto>>> GetAllAsync()
+    public async Task<Responce<IEnumerable<UserResultDto>>> GetAllAsync()
     {
-        throw new NotImplementedException();
+        var users = await this.unitOfWork.UserRepository.SelectAll().ToListAsync();
+        var result = this.mapper.Map<IEnumerable<UserResultDto>>(users);
+
+        return new Responce<IEnumerable<UserResultDto>>()
+        {
+            Data=result,
+            StatusCode = 200,
+            Message="Ok"
+        };
     }
 
-    public Task<Responce<UserResultDto>> GetByIdAsync(long id)
+    public async Task<Responce<UserResultDto>> GetByIdAsync(long id)
     {
-        throw new NotImplementedException();
+        User existUser = await this.unitOfWork.UserRepository.SelectByIdAsync(id);
+        if (existUser is null)
+            return new Responce<UserResultDto>
+            {
+                StatusCode=404,
+                Message="This user not found"
+            }; // Is not found
+
+        
+        var result = this.mapper.Map<UserResultDto>(existUser);
+
+        return new Responce<UserResultDto>
+        {
+            Data = result,
+            StatusCode = 200,
+            Message="ok"
+        };
     }
 
-    public Task<Responce<UserResultDto>> ModifyAsync(UserUpdateDto dto)
+    public async Task<Responce<UserResultDto>> ModifyAsync(UserUpdateDto dto)
     {
-        throw new NotImplementedException();
+        User existUser = await this.unitOfWork.UserRepository.SelectAll().FirstOrDefaultAsync(x=>x.Id == dto.Id);
+        if (existUser is null)
+            return new Responce<UserResultDto>
+            {
+                StatusCode = 404,
+                Message = "This user not found"
+            }; // Is not found
+
+        var mappedUser = this.mapper.Map(dto, existUser);
+        this.unitOfWork.UserRepository.Update(mappedUser);
+        await this.unitOfWork.SaveAsync();
+
+        var result = this.mapper.Map<UserResultDto>(mappedUser);
+        return new Responce<UserResultDto>
+        {
+            Data= result,
+            StatusCode = 200,
+            Message="ok"
+        };
     }
 
-    public Task<Responce<bool>> RemoveAsync(long id)
+    public async Task<Responce<bool>> RemoveAsync(long id)
     {
-        throw new NotImplementedException();
+        User existUser = await this.unitOfWork.UserRepository.SelectByIdAsync(id);
+        if (existUser is null)
+            return new Responce<bool>
+            {
+                StatusCode = 404,
+                Message = "This user not found",
+                Data=false
+            }; // Is not found
+
+        this.unitOfWork.UserRepository.Delete(existUser);
+        await this.unitOfWork.SaveAsync();
+        return new Responce<bool>
+        {
+            Data=true,
+            StatusCode = 200,
+            Message="ok"
+        };
     }
 }

@@ -6,7 +6,6 @@ public class GoalCreationDto
     public string GoalTitle { get; set; }
     public string GoalDescription { get; set; }
     public DateTime StartDate { get; set; }
-
     public DateTime DueDate { get; set; }
     public string Status { get; set; }
 }

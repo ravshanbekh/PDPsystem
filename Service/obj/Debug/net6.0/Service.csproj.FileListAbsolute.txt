@@ -10,3 +10,8 @@ D:\C#\Bee\Service\obj\Debug\net6.0\Service.dll
 D:\C#\Bee\Service\obj\Debug\net6.0\refint\Service.dll
 D:\C#\Bee\Service\obj\Debug\net6.0\Service.pdb
 D:\C#\Bee\Service\obj\Debug\net6.0\ref\Service.dll
+D:\C#\Bee\Service\bin\Debug\net6.0\Data.dll
+D:\C#\Bee\Service\bin\Debug\net6.0\Domain.dll
+D:\C#\Bee\Service\bin\Debug\net6.0\Data.pdb
+D:\C#\Bee\Service\bin\Debug\net6.0\Domain.pdb
+D:\C#\Bee\Service\obj\Debug\net6.0\Service.csproj.CopyComplete
