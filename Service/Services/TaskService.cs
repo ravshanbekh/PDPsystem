@@ -3,7 +3,6 @@ using Data.IRepository;
 using Data.Repository;
 using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using Service.DTOs.GoalDTOs;
 using Service.DTOs.TaskDTOs;
 using Service.Helpers;
 using Service.Interfaces;
