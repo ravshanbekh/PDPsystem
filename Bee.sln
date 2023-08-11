@@ -9,9 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{6DC09372-C881-47A2-8515-96FDF71FDA3B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeeApp", "BeeApp\BeeApp.csproj", "{074A5D43-2E6A-49BE-B1C8-5149E2975ACC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bee", "Bee\Bee.csproj", "{7E824BFA-D6B4-4276-8F75-43CBF347AB1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bee", "Bee\Bee.csproj", "{7E824BFA-D6B4-4276-8F75-43CBF347AB1B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +29,6 @@ Global
 		{6DC09372-C881-47A2-8515-96FDF71FDA3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DC09372-C881-47A2-8515-96FDF71FDA3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DC09372-C881-47A2-8515-96FDF71FDA3B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{074A5D43-2E6A-49BE-B1C8-5149E2975ACC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{074A5D43-2E6A-49BE-B1C8-5149E2975ACC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{074A5D43-2E6A-49BE-B1C8-5149E2975ACC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{074A5D43-2E6A-49BE-B1C8-5149E2975ACC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7E824BFA-D6B4-4276-8F75-43CBF347AB1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7E824BFA-D6B4-4276-8F75-43CBF347AB1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E824BFA-D6B4-4276-8F75-43CBF347AB1B}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -8,9 +8,9 @@ namespace Bee.View;
 
 public class BeeViewMethod
 {
-    TaskService taskService=new TaskService();
-    GoalService goalService=new GoalService();
-    JournalEntryService journalEntryService=new JournalEntryService();
+    TaskService taskService = new TaskService();
+    GoalService goalService = new GoalService();
+    JournalEntryService journalEntryService = new JournalEntryService();
 
     public UserCreationDto Registration()
     {
@@ -102,15 +102,15 @@ public class BeeViewMethod
         Console.Write("Status: ");
         string status = Console.ReadLine();
 
-        var task=taskService.GetAllAsync().Result.Data.FirstOrDefault(x=>x.TaskName==name);
-        if(task == null)
+        var task = taskService.GetAllAsync().Result.Data.FirstOrDefault(x => x.TaskName == name);
+        if (task == null)
         {
             return null;
         }
 
         return new TaskUpdateDto()
         {
-            Id=task.Id,
+            Id = task.Id,
             GoalId = goalId,
             TaskName = name,
             TaskDescription = description,
@@ -159,14 +159,14 @@ public class BeeViewMethod
         DateTime dueDate = DateTime.Now;
 
         var goal = goalService.GetAllAsync().Result.Data.FirstOrDefault(x => x.GoalTitle == title);
-        if(goal == null)
+        if (goal == null)
         {
             return null;
         }
 
         return new GoalUpdateDto()
         {
-            Id=goal.Id,
+            Id = goal.Id,
             UserId = userId,
             GoalTitle = title,
             GoalDescription = description,
@@ -198,15 +198,15 @@ public class BeeViewMethod
 
         DateTime entryDate = DateTime.Now;
 
-        var journalEntry=journalEntryService.GetAllAsync().Result.Data.FirstOrDefault( x => x.EntryText == entryText);
-        if(journalEntry == null)
+        var journalEntry = journalEntryService.GetAllAsync().Result.Data.FirstOrDefault(x => x.EntryText == entryText);
+        if (journalEntry == null)
         {
             return null;
         }
 
         return new JournalEntryUpdateDto()
         {
-            Id=journalEntry.Id,
+            Id = journalEntry.Id,
             UserId = userId,
             EntryDate = entryDate,
             EntryText = entryText

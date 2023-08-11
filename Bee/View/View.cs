@@ -49,7 +49,8 @@ public class View
         while (true)
         {
             Console.WriteLine("Menu:");
-            Console.WriteLine(@"1)Create Task
+            Console.WriteLine(@"
+                                1)Create Task
                                 2)Update Task
                                 3)See all Tasks
                                 4)Delete Task
@@ -83,7 +84,7 @@ public class View
                 var tasks=taskService.GetAllAsync().Result.Data;
                 foreach (var task in tasks)
                 {
-                    if(task.Id == userResultDto.Id)
+                    if(task.GoalId == userResultDto.Goals.Select(x=>x.Id).FirstOrDefault())
                     {
                         Console.WriteLine($"|id-{task.Id}|name-{task.TaskName}|description-{task.TaskDescription}|priority-{task.Priority}|status-{task.Status}");
                     }
@@ -91,23 +92,45 @@ public class View
             }
             else if (choose == "4")
             {
-
+                Console.Write("Task name: ");
+                string name=Console.ReadLine();
+                var task=taskService.GetAllAsync().Result.Data.FirstOrDefault(x => x.TaskName.Equals(name));
+                if (task is not null)
+                    taskService.RemoveAsync(task.Id);
             }
             else if (choose == "5")
             {
+                var goal = beeViewMethod.GoalCreateConsole(userResultDto.Id);
+                var temp = goalService.AddAsync(goal);
 
+                if (temp is not null)
+                    Console.WriteLine("Succes");
             }
             else if (choose == "6")
             {
-
+                var goal = beeViewMethod.GoalUpdateConsole(userResultDto.Id);
+                var temp = goalService.ModifyAsync(goal);
+                if (temp is not null)
+                    Console.WriteLine("Succes");
             }
             else if (choose == "7")
             {
-
+                var goals = goalService.GetAllAsync().Result.Data;
+                foreach (var goal in goals)
+                {
+                    if (goal.UserId == userResultDto.Id)
+                    {
+                        Console.WriteLine($"|id-{goal.Id}|title-{goal.GoalTitle}|duedate-{goal.DueDate}|stardate-{goal.StartDate}|status-{goal.Status}");
+                    }
+                }
             }
             else if (choose == "8")
             {
-
+                Console.Write("Goal Title: ");
+                string title = Console.ReadLine();
+                var goal = goalService.GetAllAsync().Result.Data.FirstOrDefault(x => x.GoalTitle.Equals(title));
+                if (goal is not null)
+                    taskService.RemoveAsync(goal.Id);
             }
             else if (choose == "9")
             {
